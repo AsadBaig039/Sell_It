@@ -29,6 +29,8 @@ const initialMessages = [
 
 function MessagesScreen(props) {
   const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
+  // delete item function
   const handleDelete = (message) => {
     const newMessages = messages.filter((m) => m.id !== message.id);
     setMessages(newMessages);
@@ -50,6 +52,17 @@ function MessagesScreen(props) {
           />
         )}
         ItemSeparatorComponent={listItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 3,
+              title: "Ali Zaib",
+              description: "Seller",
+              image: require("../assets/asad.jpg"),
+            },
+          ]);
+        }}
       />
     </Screen>
   );
