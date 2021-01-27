@@ -23,12 +23,27 @@ import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [isNew, setIsNew] = useState(false);
+  const Categories = [
+    { label: "Furniture", value: 1 },
+    { label: "Clothing", value: 2 },
+    { label: "Mobiles", value: 3 },
+  ];
+  // const [category, setCategory] = useState(Categories[0]);
+  const [category, setCategory] = useState();
+
   //const { landscape } = useDeviceOrientation();
   return (
-    <Screen>
-      <AppPicker icon="apps" placeholder="Category" />
-      <AppTextInput icon="email" placeholder="Email" />
-      {/* <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} /> */}
-    </Screen>
+    <LoginScreen />
+    // <Screen>
+    //   <AppPicker
+    //     selectedItem={category}
+    //     onSelectItem={(item) => setCategory(item)}
+    //     icon="apps"
+    //     item={Categories}
+    //     placeholder="Category"
+    //   />
+    //   <AppTextInput icon="email" placeholder="Email" />
+    //   {/* <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} /> */}
+    // </Screen>
   );
 }
