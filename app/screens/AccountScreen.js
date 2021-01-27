@@ -1,12 +1,15 @@
 import React from "react";
-import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
-import Icon from "../components/Icon";
 import { StyleSheet, View, FlatList } from "react-native";
 
+import Icon from "../components/Icon";
 import colors from "../config/colors";
-import listItemSeparator from "../components/listItemSeparator";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
+
+import Screen from "../components/Screen";
+import {
+  ListItem,
+  listItemSeparator,
+  ListItemDeleteAction,
+} from "../components/lists";
 
 function AccountScreen(props) {
   const menuItems = [
