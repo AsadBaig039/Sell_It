@@ -37,7 +37,7 @@ function AppPicker({ icon, placeholder, ...otherProps }) {
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
         <Screen>
-          <Button title="Close" onPress={() => setModalVisible(false)} />
+          <Button title="Close picker" onPress={() => setModalVisible(false)} />
         </Screen>
       </Modal>
     </>
