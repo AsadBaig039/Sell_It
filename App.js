@@ -25,8 +25,8 @@ export default function App() {
   const [isNew, setIsNew] = useState(false);
   const Categories = [
     { label: "Furniture", value: 1 },
-    { label: "Clothing", value: 2 },
-    { label: "Mobiles", value: 3 },
+    { label: "laptop", value: 2 },
+    { label: "Mobile", value: 3 },
   ];
   // const [category, setCategory] = useState(Categories[0]);
   const [category, setCategory] = useState();
