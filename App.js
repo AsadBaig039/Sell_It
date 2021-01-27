@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Switch } from "react-native";
 import { Dimensions, View } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -16,8 +17,18 @@ import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingScreen from "./app/screens/ListingScreen";
+import LoginScreen from "./app/screens/LoginScreen";
+import AppPicker from "./app/components/AppPicker";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
   //const { landscape } = useDeviceOrientation();
-  return <ListingScreen />;
+  return (
+    <Screen>
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email" />
+      {/* <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} /> */}
+    </Screen>
+  );
 }
