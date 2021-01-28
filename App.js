@@ -20,6 +20,7 @@ import ListingScreen from "./app/screens/ListingScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 export default function App() {
   const [isNew, setIsNew] = useState(false);
@@ -33,7 +34,7 @@ export default function App() {
 
   //const { landscape } = useDeviceOrientation();
   return (
-    <LoginScreen />
+    <ListingEditScreen />
     // <Screen>
     //   <AppPicker
     //     selectedItem={category}
