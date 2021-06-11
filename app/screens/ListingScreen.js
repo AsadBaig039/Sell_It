@@ -9,7 +9,7 @@ function ListingScreen(props) {
   const listings = [
     {
       id: 1,
-      title: "Red jacket",
+      title: "Red leather jacket",
       price: "70$",
       image: require("../assets/jacket.jpg"),
     },
