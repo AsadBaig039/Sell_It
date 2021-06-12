@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import * as ImagePicker from "expo-image-picker";
+import * as Permissions from "expo-permissions";
 import { Switch } from "react-native";
-import { Dimensions, View } from "react-native";
+import { Dimensions, View, Button, Alert, Image } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 
@@ -22,17 +24,20 @@ import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
 import AppText from "./app/components/AppText";
+import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 export default function App() {
-  const [isNew, setIsNew] = useState(false);
-  const Categories = [
-    { label: "Furniture", value: 1 },
-    { label: "laptop", value: 2 },
-    { label: "Mobile", value: 3 },
-  ];
+  // const [isNew, setIsNew] = useState(false);
+  // const Categories = [
+  //   { label: "Furniture", value: 1 },
+  //   { label: "laptop", value: 2 },
+  //   { label: "Mobile", value: 3 },
+  // ];
   // const [category, setCategory] = useState(Categories[0]);
-  const [category, setCategory] = useState();
+  // const [category, setCategory] = useState();
   //const { landscape } = useDeviceOrientation();
+
   return (
     <ListingEditScreen />
     // <Screen>
