@@ -11,7 +11,7 @@ import {
   ListItemDeleteAction,
 } from "../components/lists";
 
-function AccountScreen(props) {
+function AccountScreen({ navigation }) {
   const menuItems = [
     {
       title: "My Listings",
@@ -19,6 +19,7 @@ function AccountScreen(props) {
         name: "format-list-bulleted",
         backgroundColor: colors.primary,
       },
+      targetScreen: "Account",
     },
     {
       title: "My Messages",
@@ -26,6 +27,7 @@ function AccountScreen(props) {
         name: "email",
         backgroundColor: colors.secondary,
       },
+      targetScreen: "Messages",
     },
   ];
   return (
@@ -51,6 +53,7 @@ function AccountScreen(props) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
