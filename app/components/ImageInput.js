@@ -29,13 +29,43 @@ function ImageInput({ imageUri, onChangeImage }) {
       ]);
   };
 
+  const cloudinaryUpload = async (photo) => {
+    const data = new FormData();
+    data.append("file", photo);
+    data.append("upload_preset", "sellit");
+    data.append("cloud_name", "dzcdsqxkb");
+    await fetch("http://api.cloudinary.com/v1_1/dzcdsqxkb/image/upload", {
+      method: "post",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        onChangeImage(data.url);
+      })
+      .catch((err) => {
+        console.log(err);
+        Alert.alert("An Error Occured While Uploading");
+      });
+  };
+
   const selectImage = async () => {
     try {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         quality: 0.5,
       });
-      if (!result.cancelled) onChangeImage(result.uri);
+      if (!result.cancelled) {
+        onChangeImage(result.uri);
+        // const uri = result.uri;
+        // const type = result.type;
+        // const name = "sellit";
+        // const source = {
+        //   uri,
+        //   type,
+        //   name,
+        // };
+        // cloudinaryUpload(source);
+      }
     } catch (error) {
       console.log("Error reading an image");
     }

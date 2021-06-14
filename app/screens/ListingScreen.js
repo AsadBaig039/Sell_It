@@ -5,29 +5,23 @@ import { Listings } from "../config/listingsData";
 
 import Screen from "../components/Screen";
 import Card from "../components/Card";
+import ActivityIndicator from "../components/ActivityIndicator";
 import colors from "../config/colors";
 import routes from "../navigation/routes";
 
 import listingsApi from "../api/listings";
 import AppText from "../components/AppText";
 import AppButton from "../components/AppButton";
+import useApi from "../hooks/useApi";
 
 function ListingScreen({ navigation }) {
   const [listings, setListings] = useState(Listings);
-  // const [listings, setListings] = useState([]);
-  // const [error, setError] = useState(false);
-  // console.log(listings);
 
-  // const loadListings = async () => {
-  //   const response = await listingsApi.getListings();
-  //   if (!response.ok) return setError(true);
-
-  //   setError(false);
-  //   setListings(response.data);
-  // };
+  // const getListingsApi = useApi(listingsApi.getListings);
+  // console.log(getListingsApi.data);
 
   // useEffect(() => {
-  //   loadListings();
+  //   getListingsApi.request();
   // }, []);
   // const listings = [
   //   {
@@ -51,7 +45,7 @@ function ListingScreen({ navigation }) {
   // ];
   return (
     <Screen style={styles.screen}>
-      {/* {error && (
+      {/* {getListingsApi.error && (
         <View
           style={{
             width: "100%",
@@ -64,7 +58,10 @@ function ListingScreen({ navigation }) {
           <AppButton title="Retry" onPress={loadListings}></AppButton>
         </View>
       )} */}
+
+      {/* <ActivityIndicator visible={getListingsApi.loading} /> */}
       <FlatList
+        // data={getListingsApi.request}
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (

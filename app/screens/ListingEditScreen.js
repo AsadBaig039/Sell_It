@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Alert } from "react-native";
 import * as Yup from "yup";
 
 import {
@@ -14,6 +14,10 @@ import FormImagePicker from "../components/forms/FormImagePicker";
 import colors from "../config/colors";
 import * as Location from "expo-location";
 import useLocation from "../hooks/useLocation";
+import ListingsApi from "../api/listings";
+import { Listings } from "../config/listingsData";
+import { values } from "lodash";
+import UploadScreen from "./UploadScreen";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -79,10 +83,40 @@ const categories = [
     value: 9,
   },
 ];
-function ListingEditScreen(props) {
+function ListingEditScreen({ navigation }) {
   const location = useLocation();
+  // const [uploadVisible, setUploadVisible] = useState(false);
+  // const [progress, setProgress] = useState(0);
+
+  const handleSubmit = (listing, { resetForm }) => {
+    // setProgress(0);
+    // setUploadVisible(true);
+
+    // const result = await ListingsApi.addListing({ ...listing, location },progress=>setProgress(progress));
+
+    // if (!result.ok) {
+    //   setUploadVisible(false);
+    //   return Alert.alert("Could not save the listing");
+    // }
+
+    const data = {
+      id: Math.random() * 10,
+      title: listing.title,
+      images: listing.images,
+      price: listing.price,
+      categoryId: listing.category.value,
+      userId: Math.random() * 10,
+      location: JSON.stringify(location),
+    };
+
+    Listings.unshift(data);
+    resetForm();
+    // navigation.navigate("Listing");
+  };
+
   return (
     <Screen style={styles.container}>
+      {/* <UploadScreen onDone{()=>setUploadVisible(false)} progress={progress} visible={setUploadVisible} /> */}
       <Form
         initialValues={{
           title: "",
@@ -91,7 +125,7 @@ function ListingEditScreen(props) {
           category: null,
           images: [],
         }}
-        onSubmit={(values) => console.log(location)}
+        onSubmit={handleSubmit}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
