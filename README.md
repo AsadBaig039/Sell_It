@@ -4,7 +4,9 @@ Sell it is a market place for selling the stuff you don't need anymore. This rep
 
 ## App UI ScreenShots
 
-[![Product Name Screen Shot][product-screenshot]](<require('./app/assets/couch1_full.jpg)>)
+<a>
+    <img src="./app/assets/camera1_full.jpg" alt="Camera" width="80" height="80">
+</a>
 
 ### Installation
 
