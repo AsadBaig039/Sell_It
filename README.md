@@ -6,7 +6,7 @@ Sell it is a market place for selling the stuff you don't need anymore. This rep
 
 <html>
 <head>
-    <style type="text/css">
+ <style type="text/css">
     .row {
   display: flex;
 }
@@ -21,13 +21,13 @@ padding: 5px;
 <body>
   <div class="row">
   <div class="column">
-    <img src="./app/assets/camera1_full.jpg" alt="Camera" width="300" height="600">
+    <img src="./app/assets/camera1_full.jpg" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="./app/assets/camera1_full.jpg" alt="Camera" width="300" height="600">
+    <img src="./app/assets/camera1_full.jpg" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="./app/assets/camera1_full.jpg" alt="Camera" width="300" height="600">
+    <img src="./app/assets/camera1_full.jpg" alt="Snow" style="width:100%">
   </div>
 </div>
 </body>
