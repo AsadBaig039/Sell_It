@@ -85,12 +85,12 @@ const categories = [
 ];
 function ListingEditScreen({ navigation }) {
   const location = useLocation();
-  // const [uploadVisible, setUploadVisible] = useState(false);
-  // const [progress, setProgress] = useState(0);
+  const [uploadVisible, setUploadVisible] = useState(false);
+  const [progress, setProgress] = useState(1);
 
   const handleSubmit = (listing, { resetForm }) => {
-    // setProgress(0);
-    // setUploadVisible(true);
+    // setProgress(0.5);
+    setUploadVisible(true);
 
     // const result = await ListingsApi.addListing({ ...listing, location },progress=>setProgress(progress));
 
@@ -116,7 +116,7 @@ function ListingEditScreen({ navigation }) {
 
   return (
     <Screen style={styles.container}>
-      {/* <UploadScreen onDone{()=>setUploadVisible(false)} progress={progress} visible={setUploadVisible} /> */}
+      <UploadScreen progress={progress} visible={true} />
       <Form
         initialValues={{
           title: "",

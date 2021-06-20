@@ -15,13 +15,24 @@ function UploadScreen({ onDone, progress = 0, visible = false }) {
             width={200}
           />
         ) : (
-          <LottieView
-            source={require("../assets/animations/Done.json")}
-            loop={false}
-            autoPlay
-            style={styles.animation}
-            onAnimationFinish={onDone}
-          />
+          <>
+            <LottieView
+              source={require("../assets/animations/Done.json")}
+              loop={false}
+              autoPlay
+              style={styles.animation}
+              onAnimationFinish={onDone}
+            />
+            <AppText
+              style={{
+                color: colors.primary,
+                fontSize: 25,
+                fontWeight: "bold",
+              }}
+            >
+              Uploaded
+            </AppText>
+          </>
         )}
 
         {/* <AppText>{progress * 100}%</AppText> */}
