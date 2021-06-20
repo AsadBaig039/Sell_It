@@ -116,7 +116,7 @@ function ListingEditScreen({ navigation }) {
 
   return (
     <Screen style={styles.container}>
-      <UploadScreen progress={progress} visible={true} />
+      {/* <UploadScreen progress={progress} visible={true} /> */}
       <Form
         initialValues={{
           title: "",
