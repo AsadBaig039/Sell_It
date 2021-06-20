@@ -10,11 +10,11 @@ Sell it is a market place for selling the stuff you don't need anymore. This rep
     .row {
   display: flex;
 }
-
 .column {
 flex: 33.33%;
 padding: 5px;
 }
+
 </style>
 
 </head>
