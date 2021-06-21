@@ -46,11 +46,9 @@ Sell it is a market place for selling the stuff you don't need anymore. This rep
 
 and here u go!!!!!!!!
 
-CONTACT -->
-
 ## Contact
 
-ASAD BAIG - [Email Address](asad.baig039@gmail.com)
+ASAD BAIG - [asad.baig039@gmail.com](asad.baig039@gmail.com)
 
 Project Link: [https://github.com/AsadBaig039/Sell_It.git](https://github.com/AsadBaig039/Sell_It.git)
 
