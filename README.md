@@ -26,27 +26,34 @@ Sell it is a market place for selling the stuff you don't need anymore. This rep
    git clone https://github.com/AsadBaig039/Sell_It.git
    ```
 2. Install NPM packages
+
    ```sh
    npm install
    ```
 
-<!-- CONTACT -->
-<!-- ## Contact
+### Run Application
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+1. Install expo app on your physical device (on Emulator app will be install automatically)
+2. Open VSCode Terminal
+3. Run the Command
+   ```sh
+   expo start
+   ```
+4. Choose Tunnel option (Incase LAN does not work).
+5. Open Expo App on your mobile or emulator
+6. Scan the QR Code
+7. Bundle will start building
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
+and here u go!!!!!!!!
+
+CONTACT -->
+
+## Contact
+
+ASAD BAIG - [Email Address](asad.baig039@gmail.com)
+
+Project Link: [https://github.com/AsadBaig039/Sell_It.git](https://github.com/AsadBaig039/Sell_It.git)
 
 <!-- ACKNOWLEDGEMENTS -->
 <!-- ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
 * [Font Awesome](https://fontawesome.com) -->
