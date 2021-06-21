@@ -63,3 +63,8 @@ Project Link: [https://github.com/AsadBaig039/Sell_It.git](https://github.com/As
 - [Location](https://docs.expo.io/versions/latest/sdk/location/)
 - [Lottie](https://lottiefiles.com/)
 - [Progress](https://www.npmjs.com/package/expo-progress)
+- [Navigation](https://reactnavigation.org/docs/getting-started/)
+
+
+
+
