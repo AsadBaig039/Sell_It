@@ -53,5 +53,13 @@ ASAD BAIG - [asad.baig039@gmail.com](asad.baig039@gmail.com)
 Project Link: [https://github.com/AsadBaig039/Sell_It.git](https://github.com/AsadBaig039/Sell_It.git)
 
 <!-- ACKNOWLEDGEMENTS -->
-<!-- ## Acknowledgements
-* [Font Awesome](https://fontawesome.com) -->
+
+## Acknowledgements
+
+- [Vector Icons](https://www.npmjs.com/package/react-native-vector-icons)
+- [Cloudinary](https://cloudinary.com/home-6-4-video-b)
+- [Formik](https://www.npmjs.com/package/react-native-formik)
+- [Yup](https://www.npmjs.com/package/yup)
+- [Location](https://docs.expo.io/versions/latest/sdk/location/)
+- [Lottie](https://lottiefiles.com/)
+- [Progress](https://www.npmjs.com/package/expo-progress)
